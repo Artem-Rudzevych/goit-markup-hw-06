@@ -72,45 +72,67 @@
         <button data-open-modal type="button" class="hero-button">
           Заказать услугу
         </button>
-        <div class="backdrop is-hidden" data-backdrop>
-          <div class="modal">
-            <h2>Оставьте свои данные, мы вам перезвоним</h2>
-            <form class="js-speaker-form">
-              <label for="user-name">Имя</label>
-              <input type="text" name="user-name" id="user-name" />
-              <label for="tel">Телефон</label>
-              <input type="tel" name="tel" id="tel" />
-              <label for="mail">Почта</label>
-              <input type="email" name="mail" id="mail" />
-              <label for="coment">Комментарий</label>
-              <input
-                type="text"
-                name="coment"
-                id="coment"
-                placeholder="Введите текст"
-              />
-              <button type="submit">Отправить</button>
-              <input
-                class=""
-                type="checkbox"
-                name="license"
-                value="yes"
-                id="check"
-              />
-              <label for="check"
-                >Соглашаюсь с рассылкой и принимаю
-                <a href=""> Условия договора</a></label
-              >
-            </form>
-            <button data-close-modal class="mod-button">
-              <svg class="modal-icon" width="18" height="18">
-                <use href="./images/icons.svg#close"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
       </section>
+      <div class="backdrop is-hidden" data-backdrop>
+        <div class="modal">
+          <form class="form js-speaker-form">
+            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
 
+            <ul class="list-style">
+              <li class="form-field">
+                <label class="form-label" for="user-name">Имя</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  autofocus
+                />
+              </li>
+              <li class="form-field">
+                <label class="form-label" for="tel">Телефон</label>
+                <input class="form-input" type="tel" name="tel" id="tel" />
+              </li>
+              <li class="form-field">
+                <label class="form-label" for="mail">Почта</label>
+                <input class="form-input" type="email" name="mail" id="mail" />
+              </li>
+              <li class="form-field">
+                <label class="form-label" for="coment">Комментарий</label>
+                <textarea
+                  class="form-coment"
+                  name="coment"
+                  id="coment"
+                  cols="30"
+                  rows="10"
+                  placeholder="Введите текст"
+                ></textarea>
+              </li>
+              <li class="form-field">
+                <input
+                  class=""
+                  type="checkbox"
+                  name="terms"
+                  value="yes"
+                  id="terms"
+                />
+                <label for="terms"
+                  >Соглашаюсь с рассылкой и принимаю
+                  <a href=""> Условия договора</a></label
+                >
+              </li>
+              <li class="modal-button">
+                <button class="hero-button" type="submit">Отправить</button>
+              </li>
+            </ul>
+          </form>
+          <button data-close-modal class="mod-button">
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
       <!--Advantages-->
       <section class="section">
         <div class="container">
@@ -553,6 +575,26 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div>
+            <form>
+              <h3 class="connect-title">Подпишитесь на рассылку</h3>
+              <div class="footer-items">
+                <input
+                  class="footer-input"
+                  type="email"
+                  name="footer-mail"
+                  id="footer-mail"
+                  placeholder="E-mail"
+                />
+
+                <button class="hero-button send-button" type="submit">
+                  Подписаться<svg class="send-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
