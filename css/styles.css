@@ -162,19 +162,19 @@ header {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: var(--primary-background-color);
-
   padding: 15px 16px;
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .checkbox {
   appearance: none;
 }
-.checkbox:checked ~ .checked-icon {
-  opacity: 1;
-}
+
 .checkbox:checked ~ .check-icon {
-  opacity: 0;
+  background-color: var(--hover-text-color);
+  border-radius: 2px;
+  border: 2px solid var(--hover-text-color);
 }
 .check-field {
   display: flex;
@@ -190,15 +190,12 @@ header {
 }
 .check-icon {
   opacity: 1;
-  transition: opacity 250ms var(--cubic-bezier);
-}
-.checked-icon {
-  position: absolute;
-  background-color: var(--hover-text-color);
-  opacity: 0;
+  border: 2px solid var(--black);
   border-radius: 2px;
-  transition: opacity 250ms var(--cubic-bezier);
+  transition: background-color 250ms var(--cubic-bezier),
+    border-color 250ms var(--cubic-bezier);
 }
+
 .terms {
   position: relative;
   display: inline-flex;
