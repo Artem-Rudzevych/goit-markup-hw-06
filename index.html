@@ -115,17 +115,26 @@
                   placeholder="Введите текст"
                 ></textarea>
               </li>
-              <li class="form-field">
-                <input
-                  class=""
-                  type="checkbox"
-                  name="terms"
-                  value="yes"
-                  id="terms"
-                />
-                <label for="terms"
-                  >Соглашаюсь с рассылкой и принимаю
-                  <a href=""> Условия договора</a></label
+              <li class="check-field">
+                <label class="terms" for="terms">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="terms"
+                    value="yes"
+                    id="terms"
+                  />
+                  <svg class="check-icon" width="16" height="15">
+                    <use href="./images/icons.svg#check-b"></use>
+                  </svg>
+                  <svg class="checked-icon" width="16" height="15">
+                    <use href="./images/icons.svg#check"></use>
+                  </svg>
+
+                  <span class="check-text"
+                    >Соглашаюсь с рассылкой и принимаю
+                    <a href="">Условия договора</a></span
+                  ></label
                 >
               </li>
               <li class="modal-button">

@@ -92,9 +92,7 @@ header {
 .form-field:nth-child(4) {
   margin-bottom: 20px;
 }
-.form-field:nth-child(5) {
-  margin-bottom: 30px;
-}
+
 .form-label {
   display: inline-block;
   margin-bottom: 4px;
@@ -116,10 +114,8 @@ header {
   transition: border-color 250ms var(--cubic-bezier);
 }
 /* Ховер и фокус на форму и конки */
-.form-input:hover,
 .form-input:focus,
-.form-input:hover + .form-icon,
-.form-input:focus + .form-icon,
+.form-field:focus-within .form-icon,
 .footer-input:focus {
   border-color: var(--hover-text-color);
   outline: 0;
@@ -170,10 +166,44 @@ header {
   padding: 15px 16px;
   margin-right: 12px;
 }
-.footer-input:focus {
-  outline: 0;
-}
 
+.checkbox {
+  appearance: none;
+}
+.checkbox:checked ~ .checked-icon {
+  opacity: 1;
+}
+.checkbox:checked ~ .check-icon {
+  opacity: 0;
+}
+.check-field {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.check-text {
+  padding-left: 8px;
+  line-height: 1.7;
+}
+.check-text a {
+  color: var(--hover-text-color);
+}
+.check-icon {
+  opacity: 1;
+  transition: opacity 250ms var(--cubic-bezier);
+}
+.checked-icon {
+  position: absolute;
+  background-color: var(--hover-text-color);
+  opacity: 0;
+  border-radius: 2px;
+  transition: opacity 250ms var(--cubic-bezier);
+}
+.terms {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
 /* Стилизация Шапки */
 .container {
   margin-left: auto;
