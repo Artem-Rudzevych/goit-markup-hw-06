@@ -186,7 +186,8 @@ header {
 .check-text a {
   color: var(--hover-text-color);
 }
-.check-text a:hover {
+.check-text a:hover,
+.check-text a:focus {
   text-decoration: none;
 }
 .check-icon {
